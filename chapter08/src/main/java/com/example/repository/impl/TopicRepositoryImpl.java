@@ -31,7 +31,12 @@ public class TopicRepositoryImpl implements TopicRepository {
     @Override
     public long updateTopic(Topic topic) {
         Query query = new Query(Criteria.where("id").is(topic.getId()));
-        Update update = new Update().set("name",topic.getName()).set("title",topic.getTitle()).set("content",topic.getContent());
+        Update update = new Update()
+                .set("name",topic.getName())
+                .set("title",topic.getTitle())
+                .set("content",topic.getContent())
+                .set("time",topic.getTime());
+
         UpdateResult updateResult = mongoTemplate.updateFirst(query,update,Topic.class);
         if(updateResult!=null){
             return updateResult.getMatchedCount();
