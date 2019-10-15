@@ -7,3 +7,4 @@
 ## SpringBoot-集成MyBatis-chapter05：https://blog.csdn.net/qiangzi1103/article/details/102519499
 ## SpringBoot-定时任务-chapter06：https://blog.csdn.net/qiangzi1103/article/details/102538272
 ## SpringBoot-集成Redis-chapter07：https://blog.csdn.net/qiangzi1103/article/details/102557067
+## SpringBoot-集成MongoDB-chapter08：https://blog.csdn.net/qiangzi1103/article/details/102569481
