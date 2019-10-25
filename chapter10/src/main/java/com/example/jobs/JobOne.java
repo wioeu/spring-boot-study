@@ -1,10 +1,7 @@
 package com.example.jobs;
 
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.DisallowConcurrentExecution;
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.quartz.*;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -25,5 +22,10 @@ public class JobOne implements Job {
                 ZoneId.systemDefault()).
                 format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         log.info(time.concat("JobOne.execute"));
+
+        //获取JobDataMap
+        JobDataMap jobDataMap =  jobExecutionContext.getJobDetail().getJobDataMap();
+        log.info(jobDataMap.getString("userName"));
+        log.info(jobDataMap.getString("passWord"));
     }
 }

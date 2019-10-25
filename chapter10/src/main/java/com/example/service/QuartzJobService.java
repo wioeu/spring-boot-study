@@ -33,14 +33,14 @@ public class QuartzJobService {
         //定时任务的元数据
         JobDataMap jobDataMap = getJobDataMap(task.getJobDataMap());
         //定时任务的描述
-        String description = task.getDesc();
+        String desc = task.getDesc();
         //定时任务的逻辑实现类
         Class<? extends Job> jobClass = (Class<? extends Job>) Class.forName(task.getJobClass());
         //定时任务的cron表达式
         String cron = task.getCron();
 
-        JobDetail jobDetail = getJobDetail(jobKey, description, jobDataMap, jobClass);
-        Trigger trigger = getTrigger(jobKey, description, jobDataMap, cron);
+        JobDetail jobDetail = getJobDetail(jobKey, desc, jobDataMap, jobClass);
+        Trigger trigger = getTrigger(jobKey, desc, jobDataMap, cron);
         scheduler.scheduleJob(jobDetail, trigger);
     }
 

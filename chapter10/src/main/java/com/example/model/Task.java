@@ -36,11 +36,6 @@ public class Task {
     private String cron;
 
     /**
-     * 元数据
-     */
-    private Map<?,?> jobDataMap;
-
-    /**
      * 任务描述
      */
     private String desc;
@@ -50,6 +45,11 @@ public class Task {
      */
     @NotNull(message = "执行任务的逻辑类名不能为空")
     private String jobClass;
+
+    /**
+     * 元数据
+     */
+    private Map<?,?> jobDataMap;
 
     public JobKey getJobKey(){
         return JobKey.jobKey(this.name,this.goup);
