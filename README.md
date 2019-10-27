@@ -9,3 +9,4 @@
 ## SpringBoot-集成Redis-chapter07：https://blog.csdn.net/qiangzi1103/article/details/102557067
 ## SpringBoot-集成MongoDB-chapter08：https://blog.csdn.net/qiangzi1103/article/details/102569481
 ## SpringBoot-集成BootAdmin-chapter09：https://blog.csdn.net/qiangzi1103/article/details/102728879
+## SpringBoot-集成Quartz-chapter10：https://blog.csdn.net/qiangzi1103/article/details/102759260
